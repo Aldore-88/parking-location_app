@@ -80,5 +80,5 @@ test("Checking correct keys are present - key missing/incorrect", async() => {
     }]
 
     const missingKey = "zone_number";
-    await expect(saveData(mockData_incomplete)).rejects.toThrow(`Missing key: zone_number`)
+    await expect(saveData(mockData_incomplete)).rejects.toThrow(`Missing key: ${missingKey}`)
 });
