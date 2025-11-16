@@ -14,7 +14,7 @@ export default async function dataPullAndSave() {
         const metadata = {
             lastSync: new Date().toISOString(),
             recordCount: data.length,
-            lastUpdate: new Date().toISOString()
+            // lastUpdate:
         };
 
         await fs.writeFile('sync-metadata.json', JSON.stringify(metadata, null, 2));
