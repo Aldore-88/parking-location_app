@@ -1,5 +1,7 @@
 import fs from 'fs/promises';
 
+//USING AS REFERENCE
+
 export default async function dataPullAndSave() {
     console.log('Pulling parking sensor data...');
     

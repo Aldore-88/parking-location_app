@@ -15,18 +15,6 @@ TESTING:
 
 global.fetch = jest.fn();
 
-// const mockData = [{
-//         "lastupdated":"2025-05-08T05:44:34+00:00",
-//         "status_timestamp":"2025-04-14T03:01:40+00:00",
-//         "zone_number":7218,
-//         "status_description":"Unoccupied",
-//         "kerbsideid":57940,
-//         "location":{
-//         "lon":144.95458322910955,
-//         "lat":-37.82027020009988
-//         }
-//     }]
-
 beforeEach(() => {
     fetch.mockClear();
 });

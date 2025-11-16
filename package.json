@@ -5,7 +5,7 @@
   "description": "WHAT I WANT TO DO CREATE A PARKING SERVICE APP, that utilizes the Melbourne CBD parking locations. Integrating with Google maps/or just any maps?",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --verbose"
   },
   "repository": {
     "type": "git",

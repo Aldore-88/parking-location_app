@@ -11,7 +11,8 @@ save metadata about the event, storing number of records and time/date fetched (
 async function fetchApiAndSave(){
     try{
         const data = await fetchParkingAPI();
-        await saveData(data);
+        const message = await saveData(data);
+        console.log(message);
     }
     catch (error) {
         console.error('Error:', error.message);
