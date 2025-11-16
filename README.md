@@ -1,23 +1,34 @@
-WHAT I WANT TO DO
-CREATE A PARKING SERVICE APP, that utilizes the Melbourne CBD parking locations. Integrating with Google maps/or just any maps?
+# WHAT I WANT TO DO
+Create a parking service app that utilizes the Melbourne CBD parking locations. Integrating with Google Maps/or just any maps?
 
-Implementation of google maps - implenetation is doable, making locations is good
-1 - marking locations on the google maps of all locations that are free -> using the lat/lon coordinates from the json
-- coloured location markers depending on duration?? -> current time minus the sensor trigger time
+---
 
-Access Melbourne CBD parking location API, and see what it gives me
-1 - Accessed - is there a max limit to how often this can be called before being blocked?
-- updater, to current data that is stored. Updating the locations that have been triggered every (5min?)
+## Implementation of Google Maps
+- Implementation is doable, making locations is good
+- Marking locations on the Google Maps of all locations that are free → using the lat/lon coordinates from the JSON
+- Coloured location markers depending on duration? → current time minus the sensor trigger time
 
-Database/json to collect the status of the locations of Melbourne CBD parking locations
-- Use Json file to start with (testing on local first)
-- data stored into database?
-- do i need all the data? what is status_timestamp and which ID is most relevant?
-- how do i have this run and track data over time? onto a proper database host?
+---
 
-Location caluclation to only display those parking locations that are within a distance away from a set location.
-- 
+## Access Melbourne CBD Parking Location API
+- Accessed - is there a max limit to how often this can be called before being blocked?
+- Updater, to current data that is stored. Updating the locations that have been triggered every (5min?)
 
-Error handling - What if nothing comes back?
+---
 
-*** Write some tests *** ( for david and wayne REECE)
+## Database/JSON to Collect the Status of the Locations
+- Use JSON file to start with (testing on local first)
+- Data stored into database?
+- Do I need all the data? What is `status_timestamp` and which ID is most relevant?
+- How do I have this run and track data over time? Onto a proper database host?
+
+---
+
+## Location Calculation
+- Only display those parking locations that are within a distance away from a set location.
+
+---
+
+## Tests
+- Write some tests (for David and Wayne REECE)
+- Error handling - What if nothing comes back?
