@@ -3,12 +3,12 @@ import fs from 'fs/promises';
 //saves the data into a .json File
 
 export async function saveData(data){
-    if (!Array.isArray(data) || data.length === 0){
-        throw new Error("No data to save")
+    if (!data || !Array.isArray(data) || data.length === 0) {
+        throw new Error("No data to save");
     }
 
     const schema = {
-        lastUpdated: "string",
+        lastupdated: "string",
         status_timestamp: "string",
         zone_number: "number",
         status_description: "string",
