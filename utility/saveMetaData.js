@@ -1,0 +1,1 @@
+//saves metadata about the time and number of files that have been pulled from api

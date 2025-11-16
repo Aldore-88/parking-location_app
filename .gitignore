@@ -1,0 +1,4 @@
+.env
+node_modules
+parking-data.json
+sync-metadata.json
