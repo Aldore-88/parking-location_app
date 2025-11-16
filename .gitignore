@@ -1,4 +1,5 @@
 .env
 node_modules
+coverage
 parking-data.json
 sync-metadata.json

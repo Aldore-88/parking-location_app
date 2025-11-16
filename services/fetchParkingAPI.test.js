@@ -1,8 +1,9 @@
 import {fetchParkingAPI} from "./fetchParkingAPI.js";
 import {expect, jest, test} from "@jest/globals";
 
-//testing fetchParkingAPI
 /*
+Test fetchParkingAPI function
+
 TESTING:
 - ~Data is able to be received
 - ~Errors 404, 500
@@ -75,7 +76,7 @@ test("Error - Receiving Blank Array", async () => {
     await expect(fetchParkingAPI()).rejects.toThrow("API returned no parking data")
 });
 
-test("Error - Receiving null", async () => {
+test("Error - Receiving null data", async () => {
     fetch.mockResolvedValueOnce({
         ok: true,
         status: 200,

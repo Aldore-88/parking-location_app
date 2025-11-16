@@ -1,12 +1,21 @@
-// import * as fs from 'fs';
+import { fetchParkingAPI } from "./services/fetchParkingAPI.js";
+import { saveData } from "./utility/saveData.js";
 
-// console.log('test');
+/*
+get data from API (fetchParkingAPI)
+save the data from the API to .json file (saveData)
+--
+save metadata about the event, storing number of records and time/date fetched (saveMetaData)
+*/
 
-// const data = JSON.parse(fs.readFileSync('on-street_parking_bay_sensors.json', 'utf8'));
-// console.log(data[0].lastupdated);
+async function fetchApiAndSave(){
+    try{
+        const data = await fetchParkingAPI();
+        await saveData(data);
+    }
+    catch (error) {
+        console.error('Error:', error.message);
+    }
+};
 
-
-// index.js
-import dataPullAndSave from './dataPullAndSave.js';
-
-dataPullAndSave();
+fetchApiAndSave()
