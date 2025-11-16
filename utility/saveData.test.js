@@ -46,7 +46,7 @@ test("Error - data is null", async () => {
     await expect(saveData(nullData)).rejects.toThrow("No data to save");
 });
 
-
+// **need to either intercept the writing of the parking-data.json, or write to a mock file**
 test("Checking correct keys are present - All keys present", async () => {
     const mockData_complete =[{
         "lastUpdated":"2025-05-08T05:44:34+00:00",
