@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 
-//USING AS REFERENCE
+//USING AS REFERENCE - can delete once unit tests are done
 
 export default async function dataPullAndSave() {
     console.log('Pulling parking sensor data...');
