@@ -8,7 +8,17 @@ import { fetchParkingAPI } from "./fetchParkingAPI.js";
 export async function fetchApiAndSave(){
     try{
         const data = await fetchParkingAPI();
-        const message = await saveData(data);
+
+        const schema = {
+            lastupdated: "string",
+            status_timestamp: "string",
+            zone_number: "number",
+            status_description: "string",
+            kerbsideid: "number",
+            location: {lon: "number", lat: "number"}
+        }
+
+        const message = await saveData(data, "parking-data.json", schema);
         console.log(message);
         const count = data;
         saveMetaData(count);
