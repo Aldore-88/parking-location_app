@@ -15,6 +15,7 @@ TESTING:
 
 global.fetch = jest.fn();
 
+//clears the data between each test, else the fetched data may persist between
 beforeEach(() => {
     fetch.mockClear();
 });
