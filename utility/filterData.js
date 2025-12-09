@@ -1,8 +1,8 @@
 import fs from "fs/promises"
 
-// simplify data to only the keys needed
+// filter data to only the keys needed
 
-export async function filterData(filepath){
+export async function filterData(){
     const rawData = await fs.readFile('./parking-data.json', 'utf-8');
     const data = JSON.parse(rawData);
 
