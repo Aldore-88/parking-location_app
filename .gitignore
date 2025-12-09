@@ -3,3 +3,4 @@ node_modules
 coverage
 parking-data.json
 sync-metadata.json
+filtered-parking.json

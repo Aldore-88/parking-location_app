@@ -3,6 +3,7 @@ import { fetchParkingAPI } from "./services/fetchParkingAPI.js";
 import { saveData } from "./utility/saveData.js";
 import { saveMetaData } from "./utility/saveMetaData.js";
 import { filterData } from "./utility/filterData.js";
+import { filterDataAndSave } from "./services/filterDataAndSave.js";
 
 /*
 get data from API (fetchParkingAPI)
@@ -14,7 +15,11 @@ save metadata about the event, storing number of records and time/date fetched (
 
 fetchApiAndSave();
 
-const filteredData = await filterData();
+// const filteredData = await filterData();
+// console.log(filteredData);
+filterDataAndSave();
 
-console.log(filteredData);
+/*
+filteredData -> into map locations
 
+*/
