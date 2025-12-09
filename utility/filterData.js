@@ -12,7 +12,7 @@ export async function filterData(){
     .map(obj => ({
         lat: obj.location.lat,
         lon: obj.location.lon,
-        id: obj.kerbsideid
+        title: obj.kerbsideid
     }));
 
     return filteredData;
