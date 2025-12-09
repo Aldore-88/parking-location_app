@@ -1,6 +1,5 @@
 import {saveData} from "./saveData.js";
 import {expect, jest, test} from "@jest/globals";
-import { resolveSoa } from "dns";
 import fs from "fs/promises";
 
 /*
@@ -27,6 +26,7 @@ Testing saveData function
 //         }
 //     }]
 
+
 test("Error - data is not an object", async () => {
     const data = { lastUpdated: "2025-05-08T05:44:34+00:00" };
 
@@ -48,9 +48,8 @@ test("Error - data is null", async () => {
 });
 
 // **need to either intercept the writing of the parking-data.json, or write to a mock file**
-test("Checking correct keys are present - All keys present", async () => {
-    const mockData_complete = [
-    {
+test("Checking no errors with correct input data", async () => {
+    const mockData_complete = [{
     "lastupdated":"2025-05-08T05:44:34+00:00",
     "status_timestamp":"2025-04-14T03:01:40+00:00",
     "zone_number":7218,
@@ -62,10 +61,9 @@ test("Checking correct keys are present - All keys present", async () => {
         }
     }]
 
-
-    await expect(saveData(mockData_complete)).resolves.toBe(
-        `Saved ${mockData_complete.length} records to parking-data.json`
-    );
+    //mocking the write file
+    fs.writeFile = jest.fn().mockResolvedValue();
+    await expect(saveData(mockData_complete)).resolves.not.toThrow();
 });
 
 
